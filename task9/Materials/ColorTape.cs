@@ -6,9 +6,9 @@ namespace task9.Materials
 {
     public class ColorTape : Material
     {
-        public string Color { get; }
+        public Colors Color { get; }
 
-        public ColorTape(string color)
+        public ColorTape(Colors color)
         {
             Color = color;
         }

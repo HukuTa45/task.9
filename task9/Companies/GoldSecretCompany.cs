@@ -9,10 +9,10 @@ namespace task9.Companies
     {
         TightBox tightBox = new TightBox();
         Filler filler = new Filler();
-        public GoldSecretCompany(bool isfragile)
+        public GoldSecretCompany(bool isFragile)
         {
-            Isfragile = isfragile;
-            if (isfragile)
+            Isfragile = isFragile;
+            if (isFragile)
             {
                 Filler = filler;
             }

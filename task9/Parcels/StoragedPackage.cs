@@ -9,8 +9,8 @@ namespace task9.Parcels
     {
         private Package[] _packages;
 
-        public StoragedPackage(string address, string addressee, Company company, int price)
-            : base(address, addressee, company, price)
+        public StoragedPackage(string address, string addressee, Company company, int price, bool delivered)
+            : base(address, addressee, company, price, delivered)
         {
             _packages = new Package[] { };
         }

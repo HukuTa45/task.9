@@ -7,26 +7,26 @@ namespace task9.Parcels
 
     public class PackageStorage
     {
-        private StoragedPackage[] _packages;
-        public StoragedPackage[] Packages => _packages;
+        private List<StoragedPackage> _packages;
+        public List<StoragedPackage> Packages => _packages;
         public PackageStorage()
         {
-            _packages = new StoragedPackage[] { };
+            _packages = new List<StoragedPackage> { };
         }
         public void AddOrUpdate(NewPackage newPackage)
         {
             var storagedPackage = Get(newPackage);
             if (storagedPackage == null)
-            {
-                Array.Resize(ref _packages, _packages.Length + 1);
+            {               
                 var newStoragedPackage = new StoragedPackage
                 (
                     newPackage.Address,
                     newPackage.Addressee,
                     newPackage.Company,
-                    newPackage.Price
+                    newPackage.Price,
+                    newPackage.Delivered
                 );
-                _packages[_packages.Length - 1] = newStoragedPackage;
+                _packages.Add(newStoragedPackage);
                 newStoragedPackage.AddPackage(newStoragedPackage);
                 return;
             }

@@ -6,13 +6,14 @@ namespace task9.Materials
 {
     public class ColorBox : Material
     {
-        public string Color { get; }
+        
+       public Colors Color { get; }
 
-        public ColorBox(string color)
-        {
-            Color = color;
-        }
-
+       public ColorBox(Colors color)
+       {
+          Color = color;
+       }
+        
         public override int Price => 40;
     }
 
